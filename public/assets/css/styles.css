@@ -1,0 +1,52 @@
+
+      body {
+        font-family: "Noto Sans JP", sans-serif;
+      }
+
+      .accordian_body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+      .fa-plus {
+        display: inline;
+      }
+
+      .fa-minus {
+        display: none;
+      }
+
+      .active .fa-plus {
+        display: none;
+      }
+
+      .active .fa-minus {
+        display: inline;
+      }
+      /* Style for the button */
+      .button {
+        position: relative;
+        padding: 10px 20px;
+        background-color: #3498db;
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      /* Style for the bottom border */
+      .button::after {
+        content: "";
+        position: absolute;
+        left: 12;
+        bottom: 0;
+        width: 80%;
+        height: 2px; /* Initial border height */
+        background-color: #e74c3c;
+        transition: width 0.3s; /* Transition effect for width */
+      }
+
+      /* Hover effect to shorten the border */
+      .button:hover::after {
+        width: 50%; /* Adjust this value to control the shortened width */
+      }
+
